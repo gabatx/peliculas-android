@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/contentHolderListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/marco">
+
+    <ImageView
+            android:id="@+id/imagenListadoHolder"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tituloListadoHolder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/limelight"
+        android:text="El rey leon"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenListadoHolder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+            android:text="En un lugar de la Mancha..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/descripcionItemHolder"
+            app:layout_constraintTop_toBottomOf="@+id/tituloListadoHolder"
+            app:layout_constraintStart_toStartOf="@+id/tituloListadoHolder"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" />
+
+    <RatingBar
+            android:id="@+id/ratinBarListadoHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/black"
+            android:progressTint="@color/black"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:scaleX=".7"
+            android:rating="3.5"
+            android:scaleY=".7"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:max="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tituloListadoHolder"
+            android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

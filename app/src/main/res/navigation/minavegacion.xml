@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/minavegacion"
+    app:startDestination="@id/fragmentInicio">
+
+    <fragment
+            android:id="@+id/fragmentInicio"
+            android:name="com.example.pelisapp.ui.fragment.InicioFragment"
+            android:label="Inicio">
+        <action
+                android:id="@+id/action_fragmentInicio_to_listaFragment"
+                app:destination="@id/nav_fragment_peliculas" />
+        <action
+                android:id="@+id/action_fragmentInicio_to_ItemDetalleFragment"
+                app:destination="@id/ItemDetalleFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/ItemDetalleFragment"
+            android:name="com.example.pelisapp.ui.fragment.ItemDetalleFragment"
+            android:label="Detalle"
+            tools:layout="@layout/fragment_item_detalle" />
+    <fragment
+            android:id="@+id/nav_fragment_peliculas"
+            android:name="com.example.pelisapp.ui.fragment.ListaFragment"
+            android:label="Listado"
+            tools:layout="@layout/fragment_lista">
+        <action
+                android:id="@+id/action_listaFragment_to_itemDetalleFragment"
+                app:destination="@id/ItemDetalleFragment" />
+    </fragment>
+
+</navigation>
